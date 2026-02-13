@@ -188,9 +188,7 @@ const Signup = () => {
                       className="w-54 px-4 py-2 border rounded-lg focus:outline-none border-[#6C0C27] border-2 bg-white"
                     />
                     {errors.age && (
-                      <p className="text-[#6C0C27] text-sm">
-                        {errors.age}
-                      </p>
+                      <p className="text-[#6C0C27] text-sm">{errors.age}</p>
                     )}
                     <input
                       type="text"
@@ -200,9 +198,7 @@ const Signup = () => {
                       className="w-54 px-4 py-2 border rounded-lg focus:outline-none border-[#6C0C27] border-2 bg-white"
                     />
                     {errors.phone && (
-                      <p className="text-[#6C0C27] text-sm">
-                        {errors.phone}
-                      </p>
+                      <p className="text-[#6C0C27] text-sm">{errors.phone}</p>
                     )}
                     <select
                       name="gender"
@@ -216,9 +212,7 @@ const Signup = () => {
                       <option value="other">Other</option>
                     </select>
                     {errors.gender && (
-                      <p className="text-[#6C0C27] text-sm">
-                        {errors.gender}
-                      </p>
+                      <p className="text-[#6C0C27] text-sm">{errors.gender}</p>
                     )}
                     <select
                       name="role"
@@ -231,21 +225,33 @@ const Signup = () => {
                       <option value="female">Reviewer</option>
                     </select>
                     {errors.role && (
-                      <p className="text-[#6C0C27] text-sm">
-                        {errors.role}
-                      </p>
+                      <p className="text-[#6C0C27] text-sm">{errors.role}</p>
                     )}
                   </div>
                 </div>
               </div>
               <div className="pt-8">
+                <div className="">
+                  <label className="flex items-center gap-2 text-[#6C0C27] text-sm relative bottom-20">
+                    <input
+                      type="checkbox"
+                      className="w-4 h-4 cursor-pointer"
+                    />
+                    Agree to Terms and Conditions
+                  </label>
+                </div>
                 <button
                   type="submit"
                   className="w-full bg-white py-2 rounded-full hover:bg-gray-200 transition text-2xl border-2 border-[#6C0C27] relative bottom-15"
                 >
                   Signup
                 </button>
-                <div className="text-center pt-">Already have an account? <Link to="/login" className="text-blue-700">Login</Link></div>
+                <div className="text-center pt-">
+                  Already have an account?{" "}
+                  <Link to="/login" className="text-blue-700">
+                    Login!
+                  </Link>
+                </div>
               </div>
             </form>
           </div>

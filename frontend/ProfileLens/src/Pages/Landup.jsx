@@ -1,9 +1,133 @@
-import React from 'react'
+import React from "react";
+import PL from "../assets/PL.png";
+import { Link } from "react-router-dom";
+import { FaCheck, FaRegHeart } from "react-icons/fa";
+import { MdOutlinePrivacyTip } from "react-icons/md";
+import { SlPeople } from "react-icons/sl";
+import { BsGraphUpArrow } from "react-icons/bs";
 
 const Landup = () => {
   return (
-    <>Yoooo</>
-  )
-}
+    <>
+      <div>
+        <div className="h-fit bg-gradient-to-l from-[#f99fd6] to-[#FFF2FA] min-h-screen">
+          <div>
+            <div className="bg-white h-18 sticky top-0">
+              <img src={PL} className="p-4 " />
+              <div className="flex justify-center items-center gap-20 relative bottom-14 left-[52rem] w-fit">
+                <ul className="flex gap-20">
+                  <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
+                    Features
+                  </li>
+                  <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
+                    How it Works
+                  </li>
+                  <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
+                    Reviews
+                  </li>
+                </ul>
+                <button className="rounded-full bg-gradient-to-r from-[#6C0C27] to-[#EC38A4] py-2 px-4 text-white cursor-pointer">
+                  <Link to="/login">Get Started</Link>
+                </button>
+              </div>
+            </div>
+            <div className="flex items-center justify-center p-16">
+              <div className="rounded-full bg-white py-4 px-8 w-fit flex justify-center items-center gap-4 shadow-lg cursor-pointer">
+                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                <div>Trusted by 10,000+ users</div>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="text-6xl font-bold mt-8 text-[#6C0C27]">
+                Helping You Get Matches... not Ghosted
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="text-4xl font-semibold mt-4 text-[#6C0C27]">
+                Because "I love Travelling and Food" isn't groundbreaking!
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="w-[70rem] text-center text-2xl mt-8 text-gray-600">
+                Get private, structured feedback from real people who match your
+                dating goals. Improve your profile with actionable insights and
+                track your progress over time.
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-10 mt-25">
+              <button className="rounded-full bg-gradient-to-r from-[#6C0C27] to-[#EC38A4] py-4 px-8 text-xl text-white cursor-pointer">
+                <Link to="/login">Get My Profile Reviewed</Link>
+              </button>
+              <button className="rounded-full bg-white py-4 px-8 text-xl cursor-pointer">
+                See Example Feedback
+              </button>
+            </div>
+            <div className="flex items-center justify-center gap-10 mt-20 pb-30">
+              <div className="flex items-center justify-center gap-4 text-gray-500">
+                <div className="text-green-600 text-xl">
+                  <FaCheck />
+                </div>{" "}
+                100% Private
+              </div>
+              <div className="flex items-center justify-center gap-4 text-gray-500">
+                <div className="text-green-600 text-xl">
+                  <FaCheck />
+                </div>{" "}
+                Real Reviewers
+              </div>
+              <div className="flex items-center justify-center gap-4 text-gray-500">
+                <div className="text-green-600 text-xl">
+                  <FaCheck />
+                </div>{" "}
+                48hr Turnaround
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <div className="flex items-center justify-center">
+            <div className="text-5xl pt-12 font-bold mt-4 text-[#6C0C27]">
+              Everything You Need to Stand Out
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="text-center text-xl w-[45rem] pt-6 text-[#8c5968]">
+              ProfileLens provides a safe, structured way to improve your dating
+              profile with real human feedback.
+            </div>
+          </div>
+          <div className="flex items-center justify-center min-h-screen gap-20">
+            <div className="relative bottom-20 h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-center shadow-sm">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md">
+                ❤️
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800">
+                Structured Feedback
+              </h3>
 
-export default Landup
+              <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+                Get honest, actionable insights on photos, bio, prompts, and
+                overall authenticity.
+              </p>
+            </div>
+            <div className="relative bottom-20 h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-center shadow-sm">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md">
+                ❤️
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800">
+                Structured Feedback
+              </h3>
+
+              <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+                Get honest, actionable insights on photos, bio, prompts, and
+                overall authenticity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Landup;
