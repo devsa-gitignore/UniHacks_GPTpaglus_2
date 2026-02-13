@@ -98,10 +98,36 @@ const Landup = () => {
           </div>
           <div className="flex items-center justify-center min-h-screen gap-20">
             <div className="relative bottom-20 h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-center shadow-sm">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md">
-                ❤️
+              <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md text-[#6C0C27]">
+                <MdOutlinePrivacyTip className="w-8 h-8" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800">
+              <h3 className="text-lg font-semibold text-gray-800 mb-6">
+                Private & Confidential
+              </h3>
+
+              <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+                Your profile stays secure. Only selected reviewers see your
+                submissions.
+              </p>
+            </div>
+            <div className="relative bottom-20 h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-center shadow-sm">
+              <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md text-[#6C0C27]">
+                <SlPeople className="w-8 h-8" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-6">
+                Choose Your Reviewers
+              </h3>
+
+              <p className="mt-2 text-sm text-gray-500 leading-relaxed">
+                Select 3-5 reviewers based on gender, age, and dating intent for
+                relevant feedback.
+              </p>
+            </div>
+            <div className="relative bottom-20 h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-center shadow-sm">
+              <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md text-[#6C0C27]">
+                <FaRegHeart className="w-8 h-8" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-6">
                 Structured Feedback
               </h3>
 
@@ -111,18 +137,53 @@ const Landup = () => {
               </p>
             </div>
             <div className="relative bottom-20 h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-center shadow-sm">
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md">
-                ❤️
+              <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400 shadow-md text-[#6C0C27]">
+                <BsGraphUpArrow className="w-8 h-8" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800">
-                Structured Feedback
+              <h3 className="text-lg font-semibold text-gray-800 mb-6">
+                Track Improvements
               </h3>
 
               <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-                Get honest, actionable insights on photos, bio, prompts, and
-                overall authenticity.
+                Upload multiple versions and visualize your progress over time
+                with detailed metrics.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="bg-[#FFF2FA] relative bottom-25">
+          <div className="flex items-center justify-center">
+            <div className="text-5xl pt-8 font-bold mt-10 text-[#6C0C27]">
+              How it Works?
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="text-center text-xl w-[45rem] pt-6 text-[#8c5968]">
+              Get feedback in 3 simple steps
+            </div>
+          </div>
+          <div className="flex items-center justify-center min-h-screen gap-40 relative bottom-20">
+            <div className="flex flex-col items-center justify-center w-75">
+            <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
+              01
+            </div>
+            <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">Submit Your Profile</div>
+            <div className="pt-8 text-lg mt-4 text-[#6C0C27]">Upload photos, bio, and prompts. Choose your dating intent and preference.</div>
+          </div>
+          <div className="flex flex-col items-center justify-center w-75">
+            <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
+              02
+            </div>
+            <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">Select Reviewers</div>
+            <div className="pt-8 text-lg mt-4 text-[#6C0C27]">Pick 3-5 reviewers based on gender, age, and relationship goals for relevant insights.</div>
+          </div>
+          <div className="flex flex-col items-center justify-center w-75">
+            <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
+              03
+            </div>
+            <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">Get Feedback</div>
+            <div className="text-lg pt-8 mt-4 text-[#6C0C27]">Recieve structured feedback, honest reviews within 48 hours. Track improvements over time.</div>
+          </div>
           </div>
         </div>
       </div>
