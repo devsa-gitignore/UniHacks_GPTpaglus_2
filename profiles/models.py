@@ -1,0 +1,32 @@
+from django.db import models
+from django.conf import settings
+# Create your models here.
+User = settings.AUTH_USER_MODEL
+
+class Profile(models.Model):
+    user = models.OneToOneField(
+        User, on_delete = models.CASCADE
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class ProfileVersion(models.Model):
+    profile = models.ForeignKey(Profile,
+        on_delete=models.CASCADE, related_name = "versions")
+    bio = models.TextField()
+    dating_intent_choices = (
+        ("go_with_the_flow","Go with the flow"),
+        ("casual","Casual"),
+        ("serious","Serious"),
+    )
+    dating_intent = models.CharField(max_length=20, choices=dating_intent_choices)
+    notes = models.TextField(blank=True)
+    version_number = models.IntegerField()
+    average_score = models.FloatField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class ProfilePhoto(models.Model):
+    profile_version = models.ForeignKey(
+        ProfileVersion, on_delete=models.CASCADE,
+        related_name="photos"
+    )
+    image = models.ImageField(upload_to="profile_photos/")
