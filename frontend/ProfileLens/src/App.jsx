@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Landup from "./Pages/Landup";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-
-
+import HomePage from "./Pages/HomePage";
+import PagesWithNavbar from "./Components/PagesWithNavbar";
 
 function App() {
   return (
@@ -14,6 +14,11 @@ function App() {
           <Route path="/" element={<Landup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          {/* <Route element={<ProtectedRoute />}> */}
+          <Route element={<PagesWithNavbar />}>
+            <Route path="/home" element={<HomePage />} />
+          </Route>
+          {/* </Route> */}
         </Routes>
       </Router>
     </>
