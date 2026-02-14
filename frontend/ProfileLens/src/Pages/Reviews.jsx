@@ -26,7 +26,7 @@ const ReviewSection = ({ title, rating, children }) => (
 const Reviews = () => {
   return (
     <div className="min-h-screen bg-white w-[79rem]">
-      {/* Top Bar */}
+    
       <div className="flex justify-between items-center px-8 py-4 border-b bg-white">
         <Link
           to="/home"
