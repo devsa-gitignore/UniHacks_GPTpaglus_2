@@ -1,5 +1,6 @@
 import React from "react";
 import PL from "../assets/PL.png";
+import PLLogo from "../assets/PL Logo.png"
 import { Link } from "react-router-dom";
 import {
   FaCheck,
@@ -19,51 +20,51 @@ const Landup = () => {
   return (
     <>
       <div>
-        <div className="h-fit bg-gradient-to-l from-[#f99fd6] to-[#FFF2FA] min-h-screen">
-          <div>
-            <div className="bg-white h-18 sticky top-0">
-              <img src={PL} className="p-4 " />
-              <div className="flex justify-center items-center gap-20 relative bottom-14 left-[52rem] w-fit">
-                <ul className="flex gap-20">
-                  <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
-                    Features
-                  </li>
-                  <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
-                    How it Works
-                  </li>
-                  <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
-                    Reviews
-                  </li>
-                </ul>
-                <button className="rounded-full bg-gradient-to-r from-[#6C0C27] to-[#EC38A4] py-2 px-4 text-white cursor-pointer">
-                  <Link to="/login">Get Started</Link>
-                </button>
-              </div>
+        <div>
+          <div className="bg-white h-18 sticky top-0 z-1000">
+            <img src={PL} className="p-4 " />
+            <div className="flex justify-center items-center gap-20 relative bottom-14 left-[52rem] w-fit">
+              <ul className="flex gap-20">
+                <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
+                  Features
+                </li>
+                <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
+                  How it Works
+                </li>
+                <li className="cursor-pointer hover:bg-gray-200 rounded-full py-2  px-4">
+                  Reviews
+                </li>
+              </ul>
+              <button className="rounded-full bg-gradient-to-r from-[#6C0C27] to-[#EC38A4] py-2 px-4 text-white cursor-pointer">
+                <Link to="/login">Get Started</Link>
+              </button>
             </div>
-            <div className="flex items-center justify-center p-16">
+          </div>
+          <div className="h-screen bg-gradient-to-l from-[#f99fd6] to-[#FFF2FA] min-h-screen">
+            <div className="relative bottom-4 flex items-center justify-center p-16">
               <div className="rounded-full bg-white py-4 px-8 w-fit flex justify-center items-center gap-4 shadow-lg cursor-pointer">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <div>Trusted by 10,000+ users</div>
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="relative bottom-8 flex items-center justify-center">
               <div className="text-6xl font-bold mt-8 text-[#6C0C27]">
                 Helping You Get Matches... not Ghosted
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="relative bottom-8 flex items-center justify-center">
               <div className="text-4xl font-semibold mt-4 text-[#6C0C27]">
                 Because "I love Travelling and Food" isn't groundbreaking!
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="relative bottom-8 flex items-center justify-center">
               <div className="w-[70rem] text-center text-2xl mt-8 text-gray-600">
                 Get private, structured feedback from real people who match your
                 dating goals. Improve your profile with actionable insights and
                 track your progress over time.
               </div>
             </div>
-            <div className="flex items-center justify-center gap-10 mt-25">
+            <div className="relative bottom-8 flex items-center justify-center gap-10 mt-25">
               <button className="rounded-full bg-gradient-to-r from-[#6C0C27] to-[#EC38A4] py-4 px-8 text-xl text-white cursor-pointer">
                 <Link to="/login">Get My Profile Reviewed</Link>
               </button>
@@ -71,7 +72,7 @@ const Landup = () => {
                 See Example Feedback
               </button>
             </div>
-            <div className="flex items-center justify-center gap-10 mt-20 pb-30">
+            <div className="relative bottom-12 flex items-center justify-center gap-10 mt-20 pb-30">
               <div className="flex items-center justify-center gap-4 text-gray-500">
                 <div className="text-green-600 text-xl">
                   <FaCheck />
@@ -160,7 +161,7 @@ const Landup = () => {
             </div>
           </div>
         </div>
-        <div className="bg-[#FFF2FA] relative bottom-25">
+        <div className="bg-[#FFF2FA] h-screen">
           <div className="flex items-center justify-center">
             <div className="text-5xl pt-8 font-bold mt-10 text-[#6C0C27]">
               How it Works?
@@ -210,7 +211,7 @@ const Landup = () => {
             </div>
           </div>
         </div>
-        <div className="relative bottom-25">
+        <div className="">
           <div className="flex items-center justify-center">
             <div className="text-5xl pt-8 font-bold mt-10 text-[#6C0C27]">
               Loved by People Like You
@@ -292,8 +293,67 @@ const Landup = () => {
               </div>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-[#6C0C27] to-[#F77CC8] shadow-md text-white">
-Ready to transform your dating profile?
+        </div>
+        <div className="flex justify-center items-center bg-[#FFF2FA] min-h-screen">
+          <div className="relative rounded-3xl text-center py-20 px-40 w-[65rem] bg-gradient-to-br from-[#6C0C27] to-[#F77CC8] shadow-md text-white font-semibold text-4xl">
+            Ready to transform your dating profile?
+            <p className="text-white text-center font-thin pt-2 text-xl">
+              Join thousands of users who've improved their profiles and found
+              better matches.
+            </p>
+            <Link to="/login">
+              <button className=" text-[#6C0C27] rounded-full bg-white py-4 px-8 text-xl cursor-pointer mt-16">
+                See Example Feedback
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="bg-white px-20 py-12 relative">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <div>
+              <div className="flex items-center gap-4 font-semibold text-gray-800 text-xl">
+                <img src={PLLogo}></img>
+                ProfileLens
+              </div>
+              <p className="w-50 text-sm text-gray-500 mt-3 leading-relaxed">
+                Private, honest feedback to help you shine in the dating world.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-3">Product</h4>
+              <ul className="space-y-2 text-sm text-gray-500">
+                <li className="hover:text-gray-700 cursor-pointer">Features</li>
+                <li className="hover:text-gray-700 cursor-pointer">
+                  How It Works
+                </li>
+                <li className="hover:text-gray-700 cursor-pointer">Pricing</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-3">Company</h4>
+              <ul className="space-y-2 text-sm text-gray-500">
+                <li className="hover:text-gray-700 cursor-pointer">About</li>
+                <li className="hover:text-gray-700 cursor-pointer">Blog</li>
+                <li className="hover:text-gray-700 cursor-pointer">Careers</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-gray-800 mb-3">Legal</h4>
+              <ul className="space-y-2 text-sm text-gray-500">
+                <li className="hover:text-gray-700 cursor-pointer">Privacy</li>
+                <li className="hover:text-gray-700 cursor-pointer">Terms</li>
+                <li className="hover:text-gray-700 cursor-pointer">Security</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t mt-10 pt-6 text-center text-sm text-gray-400">
+            &#169; 2026 ProfileLens. All rights reserved.
           </div>
         </div>
       </div>
