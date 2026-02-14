@@ -5,7 +5,7 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 User=settings.AUTH_USER_MODEL
 class Review(models.Model):
     review_request=models.OneToOneField(
-        "requests.ReviewRequest",
+        "review_requests.ReviewRequest",
         on_delete=models.CASCADE
     )
     reviewer=models.ForeignKey(

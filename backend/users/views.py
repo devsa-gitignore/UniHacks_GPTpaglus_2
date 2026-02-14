@@ -3,6 +3,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import ReviewerProfile
 from .serializers import ReviewerProfileSerializer
+
+from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 # Create your views here.
 class ReviewerListView(APIView):
     def get(self,request):
@@ -27,3 +30,14 @@ class ReviewerListView(APIView):
         reviewers = reviewers.order_by('-credibility_score')
         serializer = ReviewerProfileSerializer(reviewers, many=True)
         return Response(serializer.data)
+    
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        
+        data['role'] = self.user.role 
+        data['username'] = self.user.username
+        return data
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
