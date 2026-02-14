@@ -1,10 +1,19 @@
 import React from "react";
 import PL from "../assets/PL.png";
 import { Link } from "react-router-dom";
-import { FaCheck, FaRegHeart } from "react-icons/fa";
+import {
+  FaCheck,
+  FaRegHeart,
+  FaStar,
+  FaStarHalfAlt,
+  FaRegStar,
+} from "react-icons/fa";
 import { MdOutlinePrivacyTip } from "react-icons/md";
 import { SlPeople } from "react-icons/sl";
 import { BsGraphUpArrow } from "react-icons/bs";
+import SC from "../assets/SC.png";
+import ER from "../assets/ER.png";
+import MJ from "../assets/MJ.png";
 
 const Landup = () => {
   return (
@@ -164,26 +173,127 @@ const Landup = () => {
           </div>
           <div className="flex items-center justify-center min-h-screen gap-40 relative bottom-20">
             <div className="flex flex-col items-center justify-center w-75">
-            <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
-              01
+              <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
+                01
+              </div>
+              <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">
+                Submit Your Profile
+              </div>
+              <div className="pt-8 text-lg mt-4 text-[#6C0C27]">
+                Upload photos, bio, and prompts. Choose your dating intent and
+                preference.
+              </div>
             </div>
-            <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">Submit Your Profile</div>
-            <div className="pt-8 text-lg mt-4 text-[#6C0C27]">Upload photos, bio, and prompts. Choose your dating intent and preference.</div>
-          </div>
-          <div className="flex flex-col items-center justify-center w-75">
-            <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
-              02
+            <div className="flex flex-col items-center justify-center w-75">
+              <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
+                02
+              </div>
+              <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">
+                Select Reviewers
+              </div>
+              <div className="pt-8 text-lg mt-4 text-[#6C0C27]">
+                Pick 3-5 reviewers based on gender, age, and relationship goals
+                for relevant insights.
+              </div>
             </div>
-            <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">Select Reviewers</div>
-            <div className="pt-8 text-lg mt-4 text-[#6C0C27]">Pick 3-5 reviewers based on gender, age, and relationship goals for relevant insights.</div>
-          </div>
-          <div className="flex flex-col items-center justify-center w-75">
-            <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
-              03
+            <div className="flex flex-col items-center justify-center w-75">
+              <div className="text-5xl pt-8 font-bold mt-4 text-[#6C0C27]">
+                03
+              </div>
+              <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">
+                Get Feedback
+              </div>
+              <div className="text-lg pt-8 mt-4 text-[#6C0C27]">
+                Recieve structured feedback, honest reviews within 48 hours.
+                Track improvements over time.
+              </div>
             </div>
-            <div className="text-3xl pt-8 font-semibold mt-4 text-[#6C0C27]">Get Feedback</div>
-            <div className="text-lg pt-8 mt-4 text-[#6C0C27]">Recieve structured feedback, honest reviews within 48 hours. Track improvements over time.</div>
           </div>
+        </div>
+        <div className="relative bottom-25">
+          <div className="flex items-center justify-center">
+            <div className="text-5xl pt-8 font-bold mt-10 text-[#6C0C27]">
+              Loved by People Like You
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="text-center text-xl w-[45rem] pt-6 text-[#8c5968]">
+              Real feedback from real users who improved their profiles
+            </div>
+          </div>
+          <div className="flex items-center justify-center min-h-screen gap-40 relative bottom-20">
+            <div className="relative h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-left shadow-md">
+              <div className="flex justify-left gap-1 mb-6 text-yellow-400 text-xl">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+              </div>
+
+              <p className="text-left my-4 text-sm text-gray-500 leading-relaxed">
+                "The feedback was eye-opening. I changed 3 photos and rewrote my
+                bio. Got 4x more matches within a week!"
+              </p>
+              <div className="flex gap-4 justify-center items-center">
+                <img src={SC} className="w-12 h-12 mt-4"></img>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    Sarah Chen
+                  </h3>
+                  <p>Product Designer, 28</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-left shadow-md">
+              <div className="flex justify-left gap-1 mb-6 text-yellow-400 text-xl">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaRegStar />
+              </div>
+
+              <p className="text-left my-4 text-sm text-gray-500 leading-relaxed">
+                "I was skeptical at first, but the structured feedback made it
+                so clear what to improve. Highly recommend!"
+              </p>
+              <div className="flex gap-4 justify-center items-center">
+                <img src={ER} className="w-12 h-12 mt-4"></img>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    Emma Rodriguez
+                  </h3>
+                  <p>HR Manager, 26</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative h-72 w-72 rounded-2xl border border-gray-300 bg-white p-8 text-left shadow-md">
+              <div className="flex justify-left gap-1 mb-6 text-yellow-400 text-xl">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStarHalfAlt />
+              </div>
+
+              <p className="text-left my-4 text-sm text-gray-500 leading-relaxed">
+                "ProfileLens helped me see what I was missing. The reviewers
+                were kind but honest. Best $49 I've spent."
+              </p>
+              <div className="flex gap-4 justify-center items-center">
+                <img src={MJ} className="w-12 h-12 mt-4"></img>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    Marcus Johnson
+                  </h3>
+                  <p>Software Engineer, 32</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-[#6C0C27] to-[#F77CC8] shadow-md text-white">
+Ready to transform your dating profile?
           </div>
         </div>
       </div>
