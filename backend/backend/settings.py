@@ -60,7 +60,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOW_ALL_ORIGINS = True
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [

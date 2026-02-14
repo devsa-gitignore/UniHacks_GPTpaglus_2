@@ -1,11 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.utils import timezone
+from django.core.validators import MinValueValidator
 # Create your models here.
 
 class User(AbstractUser):
     phone = models.CharField(max_length=12,null=True, blank=True)
     age = models.IntegerField(null=True, blank=True)
+    validators=[
+            MinValueValidator(18, message="You must be at least 18 years old to register.")
+        ]
     gender = models.CharField(
         max_length = 10,
         null=True, blank=True,

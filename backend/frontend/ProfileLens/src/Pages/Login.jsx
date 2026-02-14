@@ -2,33 +2,57 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaXTwitter, FaGoogle } from "react-icons/fa6";
 import { RiEyeFill, RiEyeOffFill } from "react-icons/ri";
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showpassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
 
+  const navigate = useNavigate();
+
   const validate = () => {
     const newErrors = {};
 
-    if (!email.trim()) newErrors.email = "Email is required";
+    if (!username.trim()) newErrors.username = "Username is required";
     if (!password.trim()) newErrors.password = "Password is required";
 
     setErrors(newErrors);
-    if (newErrors.email) setEmail("");
-    if (newErrors.password) setPassword("");
+    // if (newErrors.email) setEmail("");
+    // if (newErrors.password) setPassword("");
 
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
+      try{const response = await axios.post("http://127.0.0.1:8000/api/login/", {
+          username: username, 
+          password: password,
+        });
+        localStorage.setItem("access_token", response.data.access);
+        localStorage.setItem("refresh_token", response.data.refresh);
+        localStorage.setItem("user_role", response.data.role);
       alert("Login Successful!!");
-      setEmail("");
-      setPassword("");
+      if (response.data.role === "reviewer") {
+          navigate("/reviewer-dashboard");
+        } else {
+          navigate("/home");
+        }
     }
+    catch (err) {
+        // Handle Errors (Wrong password, server down, etc.)
+        const serverError = err.response?.data?.detail || "Invalid Email or Password";
+        setErrors({ server: serverError });
+        
+        // Clear inputs on error as per your original logic
+        setUsername("");
+        setPassword("");
+    }
+      }
   };
 
   return (
@@ -79,9 +103,9 @@ const Login = () => {
                 </div>
                 <input
                   type="text"
-                  placeholder="Email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
                   className="w-full px-4 py-2 border rounded-lg focus:outline-none border-[#6C0C27] border-2 bg-white"
                 />
                 {errors.email && (
