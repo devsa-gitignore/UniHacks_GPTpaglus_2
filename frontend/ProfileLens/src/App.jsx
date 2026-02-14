@@ -23,6 +23,7 @@ function App() {
             <Route path="/profiles" element={<Profile />} />
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/compare" element={<Compare />} />
+            
           </Route>
           {/* </Route> */}
         </Routes>
