@@ -4,6 +4,7 @@ import Landup from "./Pages/Landup";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import HomePage from "./Pages/HomePage";
+import Profile from "./Pages/Profile";
 import PagesWithNavbar from "./Components/PagesWithNavbar";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           {/* <Route element={<ProtectedRoute />}> */}
           <Route element={<PagesWithNavbar />}>
             <Route path="/home" element={<HomePage />} />
+            <Route path="/profiles" element={<Profile />} />
           </Route>
           {/* </Route> */}
         </Routes>

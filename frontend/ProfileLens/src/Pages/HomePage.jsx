@@ -3,7 +3,7 @@ import { FiEye } from "react-icons/fi";
 import { MdOutlineFileUpload, MdFeedback, MdPhoto } from "react-icons/md";
 import { HiArrowUpTray } from "react-icons/hi2";
 
-/* ⭐ Reusable Star Component */
+
 const StarRating = ({ rating }) => {
   return (
     <div className="flex gap-1 text-yellow-400">
@@ -16,7 +16,7 @@ const StarRating = ({ rating }) => {
   );
 };
 
-/* 🕒 Recent Activity Item */
+
 const ActivityItem = ({ icon: Icon, bg, color, text, time }) => (
   <div className="flex items-start gap-4">
     <div className={`w-10 h-10 flex items-center justify-center rounded-xl ${bg} ${color}`}>
@@ -31,9 +31,9 @@ const ActivityItem = ({ icon: Icon, bg, color, text, time }) => (
 
 const HomePage = () => {
   return (
-    <div className="w-[74rem] h-fit py-8 space-y-8">
+    <div className="w-[79rem] h-fit py-8 space-y-8 px-8">
 
-      {/* Header */}
+
       <div>
         <h1 className="text-3xl font-semibold text-gray-800">
           Welcome back, Alex!
@@ -43,7 +43,6 @@ const HomePage = () => {
         </p>
       </div>
 
-      {/* Top Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="bg-white rounded-2xl p-6 shadow-sm border">
           <StarRating rating={3} />
