@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FiUpload, FiHeart } from "react-icons/fi";
+import { FiUpload, FiHeart, FiArrowLeft } from "react-icons/fi";
 import PL from "../assets/PL Logo.png";
 
 const Profile = () => {
   return (
     <div className="min-h-screen bg-white">
       <div className="flex justify-between items-center px-8 py-4 border-b bg-white">
-        <Link to="/home" className="text-lg text-gray-500 hover:text-gray-700">
-          ← Back to Dashboard
+        <Link to="/home" className="flex justify-center items-center gap-4 text-lg text-gray-500 hover:text-gray-700">
+          <FiArrowLeft /> Back to Dashboard
         </Link>
 
         <div className="flex items-center gap-2 font-semibold text-gray-800">
@@ -119,7 +119,7 @@ const Profile = () => {
             </p>
 
             <div className="flex gap-4 mt-4">
-              {["Casual", "Serious", "Long-term"].map((item, i) => (
+              {["Casual", "Serious", "Go with the Flow"].map((item, i) => (
                 <button
                   key={i}
                   className="flex-1 border rounded-xl py-4 hover:border-pink-500 hover:text-pink-600 transition cursor-pointer"

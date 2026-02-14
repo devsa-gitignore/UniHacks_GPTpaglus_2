@@ -26,9 +26,9 @@ const Navbar = () => {
               <FiUser className="mr-2 w-6 h-6" /> My Profiles
             </li>
           </Link>
-          <li className="text-gray-800 hover:text-[#6C0C27] flex flex-row transition-transform cursor-pointer hover:bg-gradient-to-l from-[#ffd7ef96] to-white rounded-xl px-8 py-4">
+          <Link to="/reviews"><li className="text-gray-800 hover:text-[#6C0C27] flex flex-row transition-transform cursor-pointer hover:bg-gradient-to-l from-[#ffd7ef96] to-white rounded-xl px-8 py-4">
             <IoEyeOutline className="mr-2 w-6 h-6" /> Reviews
-          </li>
+          </li></Link>
           <li className="text-gray-800 hover:text-[#6C0C27] flex flex-row transition-transform cursor-pointer hover:bg-gradient-to-l from-[#ffd7ef96] to-white rounded-xl px-8 py-4">
             <FiBell className="mr-2 w-6 h-6" /> Notifications
           </li>

@@ -5,6 +5,7 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import HomePage from "./Pages/HomePage";
 import Profile from "./Pages/Profile";
+import Reviews from "./Pages/Reviews"
 import PagesWithNavbar from "./Components/PagesWithNavbar";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route element={<PagesWithNavbar />}>
             <Route path="/home" element={<HomePage />} />
             <Route path="/profiles" element={<Profile />} />
+            <Route path="/reviews" element={<Reviews />} />
           </Route>
           {/* </Route> */}
         </Routes>
