@@ -7,7 +7,7 @@ export default function PagesWithNavbar() {
       <div>
         <Navbar />
       </div>
-        <div className="ml-90 outlet">
+        <div className="ml-75 outlet">
           <Outlet />
         </div>
     </div>
