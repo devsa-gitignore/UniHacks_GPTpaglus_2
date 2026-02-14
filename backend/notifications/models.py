@@ -17,7 +17,7 @@ class Notification(models.Model):
             ("request_declined", "Request Declined"),
             ("review_completed", "Review Completed"),
         ],
-        default="Request Received"
+        default="request_received"
     )
     is_read=models.BooleanField(default=False)
     created_at=models.DateTimeField(auto_now_add=True)

@@ -36,6 +36,9 @@ class ReviewerProfile(models.Model):
     average_rating = models.FloatField(default=0)
     credibility_score=models.FloatField(default=0)
     earnings=models.FloatField(default=0)
+    is_available = models.BooleanField(default=True)
+    acceptance_rate = models.FloatField(default=100.0) 
+    completion_rate = models.FloatField(default=100.0)
     created_at = models.DateTimeField(auto_now_add=True)
     def get_price(self):
         score = self.credibility_score

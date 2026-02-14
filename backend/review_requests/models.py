@@ -22,6 +22,7 @@ class ReviewRequest(models.Model):
         choices=STATUS_CHOICES,
         default="pending"
     )
+    price_snapshot = models.FloatField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     responded_at = models.DateTimeField(null=True, blank=True)
     completed_at = models.DateTimeField(null=True, blank=True)
