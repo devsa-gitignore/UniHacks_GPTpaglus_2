@@ -5,7 +5,8 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import HomePage from "./Pages/HomePage";
 import Profile from "./Pages/Profile";
-import Reviews from "./Pages/Reviews"
+import Reviews from "./Pages/Reviews";
+import Compare from "./Pages/CompareReview";
 import PagesWithNavbar from "./Components/PagesWithNavbar";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/profiles" element={<Profile />} />
             <Route path="/reviews" element={<Reviews />} />
+            <Route path="/compare" element={<Compare />} />
           </Route>
           {/* </Route> */}
         </Routes>

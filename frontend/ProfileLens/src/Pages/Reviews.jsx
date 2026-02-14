@@ -4,7 +4,6 @@ import { FaStar } from "react-icons/fa";
 import { FiArrowLeft, FiTrendingUp } from "react-icons/fi";
 import PL from "../assets/PL Logo.png";
 
-
 const Stars = ({ count }) => (
   <div className="flex gap-1 text-yellow-400 text-sm">
     {[...Array(5)].map((_, i) => (
@@ -29,15 +28,21 @@ const Reviews = () => {
     <div className="min-h-screen bg-white w-[79rem]">
       {/* Top Bar */}
       <div className="flex justify-between items-center px-8 py-4 border-b bg-white">
-              <Link to="/home" className="flex justify-center items-center gap-4 text-lg text-gray-500 hover:text-gray-700">
-                <FiArrowLeft /> Back to Dashboard
-              </Link>
-      
-              <div className="flex items-center gap-2 font-semibold text-gray-800">
-                <img src={PL}></img>
-                ProfileLens
-              </div>
-            </div>
+        <Link
+          to="/home"
+          className="flex justify-center items-center gap-4 text-lg text-gray-500 hover:text-gray-700"
+        >
+          <FiArrowLeft /> Back to Dashboard
+        </Link>
+
+        <Link
+          to="/compare"
+          className="flex items-center gap-2 px-4 py-2 rounded-full border border-[#8b2d52] text-[#8b2d52] text-sm font-medium hover:bg-pink-50 transition"
+        >
+          <FiTrendingUp className="text-base" />
+          Compare Versions
+        </Link>
+      </div>
 
       {/* Container */}
       <div className="max-w-5xl mx-auto px-6 py-10 space-y-8">
@@ -69,8 +74,8 @@ const Reviews = () => {
 
             <p className="text-sm opacity-90 mt-3 max-w-md leading-relaxed">
               Your profile has significantly improved. Reviewers highlighted
-              stronger photo selection, a more authentic bio, and clearer
-              prompt responses.
+              stronger photo selection, a more authentic bio, and clearer prompt
+              responses.
             </p>
           </div>
 
@@ -122,7 +127,9 @@ const Reviews = () => {
             </div>
 
             <div>
-              <h4 className="font-medium text-red-500 mb-2">Areas to Improve</h4>
+              <h4 className="font-medium text-red-500 mb-2">
+                Areas to Improve
+              </h4>
               <ul className="list-disc pl-5 space-y-1 text-gray-600">
                 <li>Replace unclear group photo</li>
                 <li>Add a strong full-body shot</li>
@@ -202,32 +209,31 @@ const Reviews = () => {
 
         {/* Action Items */}
         {/* Action Items */}
-<ReviewSection title="Top 5 Action Items" rating={0}>
-  <div className="space-y-3">
-    {[
-      "Replace group photo with a clear full-body shot",
-      "Add specific detail to hiking interest",
-      "Expand ‘I’m looking for’ with values or traits",
-      "Swap mirror selfie for a natural candid photo",
-      "Include a hobby-focused lifestyle photo",
-    ].map((item, i) => (
-      <div
-        key={i}
-        className="flex items-center gap-3 bg-pink-50 border border-pink-200 rounded-xl px-4 py-3 text-sm"
-      >
-        <span className="w-6 h-6 rounded-full bg-gradient-to-r from-[#8b2d52] to-[#d65b9c] text-white flex items-center justify-center text-xs font-semibold">
-          {i + 1}
-        </span>
-        <span className="text-gray-700">{item}</span>
-      </div>
-    ))}
-  </div>
+        <ReviewSection title="Top 5 Action Items" rating={0}>
+          <div className="space-y-3">
+            {[
+              "Replace group photo with a clear full-body shot",
+              "Add specific detail to hiking interest",
+              "Expand ‘I’m looking for’ with values or traits",
+              "Swap mirror selfie for a natural candid photo",
+              "Include a hobby-focused lifestyle photo",
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-3 bg-pink-50 border border-pink-200 rounded-xl px-4 py-3 text-sm"
+              >
+                <span className="w-6 h-6 rounded-full bg-gradient-to-r from-[#8b2d52] to-[#d65b9c] text-white flex items-center justify-center text-xs font-semibold">
+                  {i + 1}
+                </span>
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
+          </div>
 
-  <button className="w-full mt-6 bg-gradient-to-r from-[#8b2d52] to-[#d65b9c] text-white py-3 rounded-xl font-medium hover:opacity-90 transition">
-    Upload Improved Version
-  </button>
-</ReviewSection>
-
+          <button className="w-full mt-6 bg-gradient-to-r from-[#8b2d52] to-[#d65b9c] text-white py-3 rounded-xl font-medium hover:opacity-90 transition">
+            Upload Improved Version
+          </button>
+        </ReviewSection>
       </div>
     </div>
   );
