@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'users',
     'profiles',
     'reviews',
-    'requests',
+    'review_requests',
     'ratings',
     'improvement_tracker',
 ]

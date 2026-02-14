@@ -22,7 +22,7 @@ class ProfileVersion(models.Model):
     )
     dating_intent = models.CharField(max_length=20, choices=dating_intent_choices)
     notes = models.TextField(blank=True)
-    version_number = models.IntegerField()
+    version_number = models.IntegerField(default=1)
     average_score = models.FloatField(default=0)
     positive_impressions = models.IntegerField(default=0)
     negative_impressions = models.IntegerField(default=0)
